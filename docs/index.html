@@ -1,132 +1,251 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>マリトッツォ大好きブログ</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="icon" href="../sozai/mariko.jpg">
-  <style>ul {padding-left: 0;}
-  </style>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-</head>
-<body class="p-3 mb-2 bg-light text-dark">
-    <div class="headerimg col-"><img src="../sozai/header.jpg" alt="ヘッダー"></div>
-  <header>
-    
-    <div class="header-content">
-        
-      <h1><a href="index.html">マリトッツォ大好きブログ</a></h1>
-      <nav>
-        <ul>
-          <li><a href="../docs/about/index.html">このブログについて</a></li>
-        </ul>
-      </nav>
+  <head>
+    <title>マリトッツォ大好きブログ</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" href="sozai/mariko.jpg" />
+
+    <script src="JS/iine.js"></script>
+  </head>
+
+  <body class="p-3 mb-2 bg-light text-dark">
+    <div class="headerimg col-">
+      <img src="sozai/header.jpg" alt="ヘッダー" />
     </div>
-  </header>
+    <header>
+      <div class="header-content">
+        <h1><a href="index.html">マリトッツォ大好きブログ</a></h1>
+      </div>
+    </header>
 
-  
+    <div class="container">
+      <div class="row">
+        <main class="col-12 col-lg-8 order-2 order-lg-1">
+          <div class="About">
+            <h4>このブログについて</h4>
+            <p class="AboutContent">
+              このブログは、マリトッツォなしでは生きていけない私が、
+              マリトッツォについていろいろ書いていくブログです😊<br />
+              マリトッツォの魅力をたくさんの人に伝えられたらいいなと思っています！<br />
+              絶対、最後まで読んでね💕
+            </p>
+          </div>
 
-  <div class="container">
-    <div class="row">
-        <main class="col-11 col-md-8 order-2 order-md-1">
-        <article>
+          <article>
             <h2>話題のマリトッツォ食べてみた😋</h2>
             <div class="date">2021/3/13</div>
-            <p>みんな聞いて！<br>
-            この間、パン屋さんで超話題のマリトッツォ食べてみたんだけど、<br>
-            めっちゃ美味しかった🤤<br>
-            一口食べたらクリームがふわっと出てきて、<br>
-            甘さが絶妙なんだよね！<br>
-            まじで感動したわ～🌟</p>
-        </article>
-        <article>
+            <p>
+              みんな聞いて！<br />
+              この間、世間で超話題のマリトッツォ食べてみたんだけど、<br />
+              めっちゃ美味しかった🤤<br />
+              一口食べたらクリームがふわっと出てきて、<br />
+              甘さが絶妙なんだよね！<br />
+              まじで感動したわ～🌟
+            </p>
+            <div class="Iine">
+              <button
+                class="btn like-button"
+                onclick="likeButton(1)"
+                style="
+                  color: white;
+                  background-color: #e3acae;
+                  border: none;
+                  font-weight: bold;
+                "
+              >
+                ♡いいね
+                <span
+                  id="likes-count-1"
+                  style="
+                    display: inline-block;
+                    padding: 4px 8px;
+                    border-radius: 4px;
+                    background-color: white;
+                    color: #e3acaee8;
+                  "
+                  >0</span
+                >
+              </button>
+            </div>
+          </article>
+          <article>
             <h2>毎日マリトッツォ！</h2>
             <div class="date">2021/5/26</div>
-            <p>最近、私さ、マリトッツォに完全ハマっちゃったんだよね😍<br>
-            なんか、どんな時間でも食べたくなっちゃって、<br>
-            朝食からおやつ、夜食まで、<br>
-            毎日マリトッツォ三昧だよ！笑<br>
-            フレーバーもいろいろあるし、<br>
-            新しい味の発見が楽しくてたまんないんだよね～🎉</p>
-        </article>
-        
-        <article>
+            <p>
+              最近、私、マリトッツォに完全ハマっちゃったんだよね😍<br />
+              なんか、どんな時間でも食べたくなっちゃって、<br />
+              朝食からおやつ、夜食まで、<br />
+              毎日マリトッツォ三昧だよ！笑<br />
+              フレーバーもいろいろあるし、<br />
+              新しい味の発見が楽しくてたまんないんだよね～🎉
+            </p>
+            <div class="Iine">
+              <button
+                class="btn like-button"
+                onclick="likeButton(2)"
+                style="
+                  color: white;
+                  background-color: #e3acae;
+                  border: none;
+                  font-weight: bold;
+                "
+              >
+                ♡いいね
+                <span
+                  id="likes-count-2"
+                  style="
+                    display: inline-block;
+                    padding: 4px 8px;
+                    border-radius: 4px;
+                    background-color: white;
+                    color: #e3acaee8;
+                  "
+                  >0</span
+                >
+              </button>
+            </div>
+          </article>
+
+          <article>
             <h2>コンビニでも買えた🎊</h2>
             <div class="date">2021/7/3</div>
-            <p>やったね！<br>
-            コンビニでもマリトッツォ買えるようになったよ🎉<br>
-            これってマジ便利じゃん！<br>
-            外出先で急にマリトッツォが食べたくなっても、<br>
-            すぐ手に入るって最高だよね！<br>
-            もっとマリトッツォの瞬間が増えそう～🥳</p>
-        </article>
-        
-        <article>
+            <p>
+              やったね！<br />
+              コンビニでもマリトッツォ買えるようになったよ🎉<br />
+              これってマジ便利じゃん！<br />
+              外出先で急にマリトッツォが食べたくなっても、<br />
+              すぐ手に入るって最高だよね！<br />
+              もっとマリトッツォの瞬間が増えそう～🥳
+            </p>
+            <div class="Iine">
+              <button
+                class="btn like-button"
+                onclick="likeButton(3)"
+                style="
+                  color: white;
+                  background-color: #e3acae;
+                  border: none;
+                  font-weight: bold;
+                "
+              >
+                ♡いいね
+                <span
+                  id="likes-count-3"
+                  style="
+                    display: inline-block;
+                    padding: 4px 8px;
+                    border-radius: 4px;
+                    background-color: white;
+                    color: #e3acaee8;
+                  "
+                  >0</span
+                >
+              </button>
+            </div>
+          </article>
+
+          <article>
             <h2>好きな中身ランキング！💕</h2>
             <div class="date">2021/12/15</div>
-            <p>みんなに教えちゃうね！<br>
-            私の好きなマリトッツォ中身のランキングだよ～🏆<br>
-            第3位は...<br>
-            イチゴたっぷりマリトッツォ🍓<br>
-            酸っぱさと甘さのコンボが最高で、<br>
-            スッキリ食べられるのが好きなんだよね！<br>
-            第2位は...<br>
-            濃厚チョコレートクリームのマリトッツォ🍫<br>
-            ほんと口の中でとろける感じがたまんないんだよね😍<br>
-            そして、第1位は...<br>
-            バニラビーンズが香るバニラクリームのマリトッツォだぁ！<br>
-            バニラ好きにはたまらないよ～💖</p>
-        </article>
-        
-        <article>
-            <h2>行きつけパン屋で販売終了😭</h2>
-            <div class="date">2022/2/22</div>
-            <p>ショックすぎ😱<br>
-            いつも行くパン屋さんでマリトッツォの販売が終わっちゃったんだよね、ほんとに悲しい…😢<br>
-            あそこのマリトッツォは他じゃ食べられないくらい特別だったのに！<br>
-            どこで美味しいマリトッツォ探そうかなってちょっと悩んじゃってるよ🥺<br>
-            新しいお店でも美味しいの見つけられるかな～？</p>
-        </article>
-        
-        <article>
-            <h2>買える店が限られてきたよ😞</h2>
-            <div class="date">2022/8/4</div>
-            <p>最初、マリトッツォを買えるお店もだいぶ減ってきちゃったんだ泣<br>
-            近いお店で、電車で20分😭<br>
-            しかもさ、以前ほどのバリエーションもなくなって、<br>
-            選ぶ楽しみも少なくなった...<br>
-            なんかちょっと寂しい気分だよね😔</p>
-        </article>
-        
-        <article>
-            <h2>どこにもない😭</h2>
-            <div class="date">2022/11/11</div>
-            <p>もうさ、どこに行ってもマリトッツォが見つからないんだよね。<br>
-            なんでこんなに難しいの？<br>
-            もう一度あの美味しいマリトッツォが食べたいって思ってるのに…。<br>
-            本当に悲しいよ。<br>
-            マリトッツォのない日々って想像できないくらい、私にとっては大切な存在なんだから。<br>
-            どうしてくれるの、マリトッツォ？💔</p>
-        </article>
+            <p>
+              みんなに教えちゃうね！<br />
+              私の好きなマリトッツォ中身のランキングだよ～🏆<br />
+              第3位は...<br />
+              イチゴたっぷりマリトッツォ🍓<br />
+              酸っぱさと甘さのコンボが最高で、<br />
+              スッキリ食べられるのが好きなんだよね！<br />
+              第2位は...<br />
+              濃厚チョコレートクリームのマリトッツォ🍫<br />
+              ほんと口の中でとろける感じがたまんないんだよね😍<br />
+              そして、第1位は...<br />
+              バニラビーンズが香るバニラクリームのマリトッツォだぁ！<br />
+              バニラ好きにはたまらないよ～💖
+            </p>
+            <div class="Iine">
+              <button
+                class="btn like-button"
+                onclick="likeButton(4)"
+                style="
+                  color: white;
+                  background-color: #e3acae;
+                  border: none;
+                  font-weight: bold;
+                "
+              >
+                ♡いいね
+                <span
+                  id="likes-count-4"
+                  style="
+                    display: inline-block;
+                    padding: 4px 8px;
+                    border-radius: 4px;
+                    background-color: white;
+                    color: #e3acaee8;
+                  "
+                  >0</span
+                >
+              </button>
+            </div>
+          </article>
+
+          <div class="PN">
+            <nav class="d-flex justify-content-center" aria-label="...">
+              <ul class="pagination">
+                <li class="page-item disabled">
+                  <span class="page-link">Previous</span>
+                </li>
+                <li class="page-item active" aria-current="page">
+                  <span class="page-link">1</span>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="page2/index.html">2</a>
+                </li>
+                <li class="page-item disabled">
+                  <a class="page-link">•••</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="page2/index.html">Next</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </main>
-        
-        <aside class="col-11 col-md-3 order-1 order-md-2">
-        <h3>プロフィール</h3>
-        <div class="profile"><img src="../sozai/mariko.jpg" alt="プロフィール画像"></div>
-        <ul class="Center">
-            
-            <li class="Center">マリコ</li>
-            <li class="Center">マリトッツォが大好きな<br>女子高生です！<br>
-                マリトッツォを食べることが生きがい🍰
+
+        <aside
+          class="col-12 col-lg-3 order-1 order-lg-2"
+          style="margin-right: 20px"
+        >
+          <h3>プロフィール</h3>
+          <div class="profile">
+            <img src="sozai/mariko.jpg" alt="プロフィール画像" />
+          </div>
+          <ul class="Center">
+            <li class="Name">マリコ</li>
+            <li>
+              マリトッツォが大好きな<br />女子高生です！<br />
+              マリトッツォを食べることが生きがい🍰
             </li>
-        </ul>
+          </ul>
         </aside>
+      </div>
     </div>
-  </div>
 
-  <footer>
-    <p>© 2023 マリトッツォ大好きブログ. All rights reserved.</p>
-  </footer>
+    <footer>
+      <p class="Footer">© 2023 Maritozzo kowai. All rights reserved.</p>
+    </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
