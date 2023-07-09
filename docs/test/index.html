@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Word Animation</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+
+      #wordContainer {
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wordContainer"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        var words = [
+          "ひどい...",
+          "もう半年以上マリトッツォを食べていない。",
+          "みんな新しいスイーツばっか。",
+          "私はこんなにもマリトッツォを愛しているのに...",
+          "どうしてわかってくれないの？",
+          "許せない...",
+          "食べたい.....",
+          "食べさせろ......",
+          "食べsセr",
+          "ミンナ嫌イ",
+          "許セナイ",
+          "マリtッツo",
+          "マitッtォOdfijiedhnow",
+          "Mxiッoaivauhfiwjdfuiebwnd...",
+          "....",
+          ".......",
+          "............................",
+          "�䂾����̂悤�I�𔭌䂻�����̐�̒��Ȃ����I�𕜂���",
+          "��ނ���������Ă�������̂��ꍇ��������������Ȃ��Ă����̂ƁI",
+          "��̌���Ώ�ꂽ�̂͂Ȃ��������ɂ���������ꍇ�͂��̎��̍��߂���Ƃ����I",
+          "��̉��̂͂Ȃ�����������ɂ��郁�I�Ȃ����Ă��܂���I ����̂��邱�Ƃ̓����I�𔭌��I",
+        ];
+        var container = $("#wordContainer");
+        var intervalId;
+        var maxWords = 500; // 最大描画単語数
+        var duration = 5000; // アニメーションの継続時間（ミリ秒）
+
+        function randomizePosition(element) {
+          var containerWidth = container.width();
+          var containerHeight = container.height();
+          var elementWidth = element.width();
+          var elementHeight = element.height();
+          var maxLeft = containerWidth - elementWidth;
+          var maxTop = containerHeight - elementHeight;
+
+          var leftPos = Math.floor(Math.random() * maxLeft);
+          var topPos = Math.floor(Math.random() * maxTop);
+          element.css({ left: leftPos, top: topPos });
+        }
+
+        function randomizeAngle(element) {
+          var angle = Math.floor(Math.random() * 360);
+          element.css({ transform: "rotate(" + angle + "deg)" });
+        }
+
+        function createWord() {
+          var word = words[Math.floor(Math.random() * words.length)];
+          var wordElement = $("<span class='word'>" + word + "</span>");
+          container.append(wordElement);
+          randomizePosition(wordElement);
+          randomizeAngle(wordElement);
+        }
+
+        function startAnimation() {
+          intervalId = setInterval(function () {
+            if (container.children().length < maxWords) {
+              createWord();
+            } else {
+              clearInterval(intervalId);
+              container.animate({ opacity: 0 }, duration, function () {
+                $(this).css({ display: "none" });
+              });
+            }
+          }, 50);
+        }
+
+        startAnimation();
+      });
+    </script>
+  </body>
+</html>

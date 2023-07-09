@@ -2,19 +2,23 @@
 <html>
   <head>
     <title>マリトッツォ大好きブログ</title>
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+
     <link rel="stylesheet" type="text/css" href="../style.css" />
     <link rel="icon" href="../sozai/mariko.jpg" />
+
     <script src="../JS/iine.js"></script>
     <script src="../JS/custom.js"></script>
+    <script src="../JS/AutoText.js"></script>
   </head>
 
-  <body class="p-3 mb-2 bg-light text-dark">
+  <body class="p-3 mb-2 bg-light text-dark" style="overflow-y: scroll">
     <div class="headerimg col-">
       <img src="../sozai/header.jpg" alt="ヘッダー" />
     </div>
@@ -30,83 +34,10 @@
           <article>
             <h2>・・・</h2>
             <div class="date">2023/4/4</div>
-            <p id="scrolling-text">
-              <span>ひどい...</span><br />
-              <span>もう半年以上マリトッツォを食べていない。</span><br />
-              <span>みんな新しいスイーツばっか。</span><br />
-              <span>私はこんなにもマリトッツォを愛しているのに...</span><br />
-              <span>どうしてわかってくれないの？</span><br />
-              <span>許せない...</span><br />
-              <span>食べたい.....</span><br />
-              <span>食べさせろ......</span><br />
-              <span>食べsセr</span><br />
-              <span>こんな世界ナンテモウ嫌ダイヤダ嫌</span><br />
-              <span>嫌ィ</span><br />
-              <span>許セナイ</span><br />
-              <span>マリtッツo</span><br />
-              <span>マitッtォOdfijiedhnow</span><br />
-              <span>Mxiッoaivauhfiwjdfuiebwnd...</span><br />
-              <span>....</span><br />
-              <span>.......<br />
-              <span>............................</span><br />
-            </p>
-            <p>
-              �䂾����̂悤�I�𔭌䂻�����̐�̒��Ȃ����I�𕜂���
-              ��ނ���������Ă�������̂��ꍇ��������������Ȃ��Ă����̂ƁI
-              ��̌���Ώ�ꂽ�̂͂Ȃ��������ɂ���������ꍇ�͂��̎��̍��߂���Ƃ����I
-              ��̉��̂͂Ȃ�����������ɂ��郁�I�Ȃ����Ă��܂���I ����̂��邱�Ƃ̓����I�𔭌��I
-            </p>
-            <div class="Iine">
-              <button
-                class="btn like-button"
-                onclick="likeButton(5)"
-                style="
-                  color: white;
-                  background-color: #e3acae;
-                  border: none;
-                  font-weight: bold;
-                "
-              >
-                ♡いいね
-                <span
-                  id="likes-count-5"
-                  style="
-                    display: inline-block;
-                    padding: 4px 8px;
-                    border-radius: 4px;
-                    background-color: white;
-                    color: #e3acaee8;
-                  "
-                  >0</span
-                >
-              </button>
-            </div>
+            <!-- ここにAutoText.jsを呼び出す -->
+            <p id="content"></p>
+            <script src="../JS/AutoText.js"></script>
           </article>
-
-          <div class="PN">
-            <nav class="d-flex justify-content-center" aria-label="...">
-              <ul class="pagination">
-                <li class="page-item">
-                  <a class="page-link" onclick="showAlert()">Previous</a>
-                </li>
-                <li class="page-item">
-                  <a class="page-link" onclick="showAlert()">1</a>
-                </li>
-                <li class="page-item active" aria-current="page">
-                  <span class="page-link">2</span>
-                </li>
-                <li class="page-item">
-                  <a class="page-link" href="../page3/index.html">3</a>
-                </li>
-                <li class="page-item disabled">
-                  <span class="page-link">•••</span>
-                </li>
-                <li class="page-item">
-                  <a class="page-link" href="../page3/index.html">Next</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
         </main>
 
         <aside
@@ -128,13 +59,16 @@
       </div>
     </div>
 
-    <footer>
-      <p class="Footer">© 2023 Maritozzo kowai. All rights reserved.</p>
-    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
+    <script>
+      // ページ読み込み完了時に一度サイト全体を最下部にスクロール
+      window.onload = function () {
+        scrollBottom();
+      };
+    </script>
   </body>
 </html>
