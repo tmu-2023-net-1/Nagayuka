@@ -1,70 +1,37 @@
-$(document).ready(function () {
-  var words = [
-    "ひどい...",
-    "もう半年以上マリトッツォを食べていない。",
-    "みんな新しいスイーツばっか。",
-    "私はこんなにもマリトッツォを愛しているのに...",
-    "どうしてわかってくれないの？",
-    "許せない...",
-    "食べたい.....",
-    "食べさせろ......",
-    "食べsセr",
-    "ミンナ嫌イ",
-    "許セナイ",
-    "マリtッツo",
-    "マitッtォOdfijiedhnow",
-    "Mxiッoaivauhfiwjdfuiebwnd...",
-    "....",
-    ".......",
-    "............................",
-    "�䂾����̂悤�I�𔭌䂻�����̐�̒��Ȃ����I�𕜂���",
-    "��ނ���������Ă�������̂��ꍇ��������������Ȃ��Ă����̂ƁI",
-    "��̌���Ώ�ꂽ�̂͂Ȃ�����������ɂ���������ꍇ�͂��̎��̍��߂���Ƃ����I",
-    "��̉��̂͂Ȃ�����������ɂ��郁�I�Ȃ����Ă��܂���I ����̂��邱�Ƃ̓����I�𔭌��I",
-  ];
-  var container = $("#wordContainer");
-  var intervalId;
-  var maxWords = 500; // 最大描画単語数
-  var duration = 5000; // アニメーションの継続時間（ミリ秒）
+const typeTarget = document.querySelectorAll(".typeing");
 
-  function randomizePosition(element) {
-    var containerWidth = container.width();
-    var containerHeight = container.height();
-    var elementWidth = element.width();
-    var elementHeight = element.height();
-    var maxLeft = containerWidth - elementWidth;
-    var maxTop = containerHeight - elementHeight;
+let options = {
+  rootMargin: "0px",
+  threshold: 0.5,
+};
 
-    var leftPos = Math.floor(Math.random() * maxLeft);
-    var topPos = Math.floor(Math.random() * maxTop);
-    element.css({ left: leftPos, top: topPos });
-  }
+let callback = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (
+      entry.intersectionRatio > 0.5 &&
+      entry.target.classList.contains("active") == false
+    ) {
+      let typeContent = entry.target.textContent;
+      let typeSprit = typeContent.split("");
+      let typeSpeed = entry.target.getAttribute("data-speed");
+      entry.target.textContent = "";
+      entry.target.classList.add("active");
 
-  function randomizeAngle(element) {
-    var angle = Math.floor(Math.random() * 360);
-    element.css({ transform: "rotate(" + angle + "deg)" });
-  }
+      let typeLength = 0;
+      let typeInterval = setInterval(() => {
+        if (typeSprit[typeLength] == undefined) {
+          clearInterval(typeInterval);
+          return false;
+        }
+        entry.target.textContent += typeSprit[typeLength];
+        typeLength++;
+      }, typeSpeed);
+    }
+  });
+};
 
-  function createWord() {
-    var word = words[Math.floor(Math.random() * words.length)];
-    var wordElement = $("<span class='word'>" + word + "</span>");
-    container.append(wordElement);
-    randomizePosition(wordElement);
-    randomizeAngle(wordElement);
-  }
+let observer = new IntersectionObserver(callback, options);
 
-  function startAnimation() {
-    intervalId = setInterval(function () {
-      if (container.children().length < maxWords) {
-        createWord();
-      } else {
-        clearInterval(intervalId);
-        container.animate({ opacity: 0 }, duration, function () {
-          $(this).css({ display: "none" });
-        });
-      }
-    }, 50);
-  }
-
-  startAnimation();
+typeTarget.forEach((e) => {
+  observer.observe(e);
 });

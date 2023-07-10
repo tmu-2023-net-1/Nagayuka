@@ -1,21 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <title>Word Animation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ホラーウェブサイト</title>
     <style>
-      body {
-        margin: 0;
-        overflow: hidden;
-      }
-
-      #wordContainer {
-        position: absolute;
-      }
+      /* CSSスタイルをここに追加 */
     </style>
   </head>
   <body>
-    <div id="wordContainer"></div>
+    <div id="text-container"></div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
@@ -43,51 +37,48 @@
           "��̌���Ώ�ꂽ�̂͂Ȃ��������ɂ���������ꍇ�͂��̎��̍��߂���Ƃ����I",
           "��̉��̂͂Ȃ�����������ɂ��郁�I�Ȃ����Ă��܂���I ����̂��邱�Ƃ̓����I�𔭌��I",
         ];
-        var container = $("#wordContainer");
-        var intervalId;
-        var maxWords = 500; // 最大描画単語数
-        var duration = 5000; // アニメーションの継続時間（ミリ秒）
 
-        function randomizePosition(element) {
-          var containerWidth = container.width();
-          var containerHeight = container.height();
-          var elementWidth = element.width();
-          var elementHeight = element.height();
-          var maxLeft = containerWidth - elementWidth;
-          var maxTop = containerHeight - elementHeight;
+        // wordsを3倍に増やす
+        words = words.concat(words).concat(words);
 
-          var leftPos = Math.floor(Math.random() * maxLeft);
-          var topPos = Math.floor(Math.random() * maxTop);
-          element.css({ left: leftPos, top: topPos });
-        }
+        // wordsをランダムに並び替える
+        words = shuffleArray(words);
 
-        function randomizeAngle(element) {
-          var angle = Math.floor(Math.random() * 360);
-          element.css({ transform: "rotate(" + angle + "deg)" });
-        }
+        var container = $("#text-container");
+        var currentIndex = 0;
 
-        function createWord() {
-          var word = words[Math.floor(Math.random() * words.length)];
-          var wordElement = $("<span class='word'>" + word + "</span>");
-          container.append(wordElement);
-          randomizePosition(wordElement);
-          randomizeAngle(wordElement);
-        }
+        function typeText() {
+          if (currentIndex >= words.length) {
+            return; // 全ての文字が表示されたら終了
+          }
 
-        function startAnimation() {
-          intervalId = setInterval(function () {
-            if (container.children().length < maxWords) {
-              createWord();
+          var word = words[currentIndex];
+          var charIndex = 0;
+          var typingInterval = setInterval(function () {
+            if (charIndex < word.length) {
+              var char = word.charAt(charIndex);
+              container.append(char);
+              charIndex++;
             } else {
-              clearInterval(intervalId);
-              container.animate({ opacity: 0 }, duration, function () {
-                $(this).css({ display: "none" });
-              });
+              clearInterval(typingInterval);
+              currentIndex++;
+              setTimeout(typeText, 10); // 次の文字を表示するまでの待ち時間（ミリ秒）
             }
-          }, 50);
+          }, 1); // 1文字あたりの表示間隔（ミリ秒）
         }
 
-        startAnimation();
+        // 配列をランダムに並び替える関数
+        function shuffleArray(array) {
+          for (var i = array.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+          }
+          return array;
+        }
+
+        typeText();
       });
     </script>
   </body>

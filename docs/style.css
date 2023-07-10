@@ -234,3 +234,11 @@ p {
   color: #f5c9cb;
   background-color: #e3acae;
 } */
+
+.typeing {
+  opacity: 0;
+}
+
+.typeing.active {
+  opacity: 1;
+}
