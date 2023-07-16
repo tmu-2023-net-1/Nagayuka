@@ -1,0 +1,595 @@
+:root {
+  --blue: #0048ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.p-3 {
+  padding: 0 !important;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: var(--blue);
+}
+
+header {
+  background-color: #000;
+  color: var(--blue);
+  padding: 20px;
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+header h1 a {
+  color: var(--blue);
+  text-decoration: none;
+
+  font-weight: bold;
+  color: rgb(190, 18, 18);
+}
+
+.container {
+  justify-content: center;
+  color: var(--blue);
+}
+
+.row {
+  justify-content: center;
+  margin: 20px;
+  color: var(--blue);
+}
+
+main {
+  flex: 3;
+  margin-right: 20px;
+  background-color: #000;
+  padding: 20px;
+}
+
+footer {
+  background-color: #000;
+  color: var(--blue);
+  padding: 10px;
+  text-align: center;
+}
+
+.Footer {
+  line-height: normal;
+  margin: 10px auto;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+a {
+  color: #e3acae;
+  text-decoration: none;
+}
+
+aside {
+  flex: 1;
+  background-color: #000;
+  padding: 20px;
+  text-align: center;
+}
+
+.profile img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.Center {
+  text-align: center;
+  padding-left: 0px;
+}
+
+.Name {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.headerimg img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.headerimg {
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+h1 a {
+  color: var(--blue);
+  text-decoration: none;
+  text-align: center;
+  font-family: Yuji Boku;
+  font-size: 40px;
+}
+
+article h2 {
+  font-size: 80px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  font-family: "Yuji Boku", serif;
+}
+
+.date {
+  text-align: right;
+  color: rgb(157, 157, 157);
+  margin-bottom: 30px;
+
+  /*縦書き*/
+  writing-mode: vertical-rl;
+}
+
+article p {
+  line-height: 1.6;
+  font-size: 17px;
+  padding-left: 10px;
+}
+
+.Iine {
+  text-align: center;
+  margin-right: 30px;
+}
+
+.btn {
+  color: var(--blue);
+  background-color: #000;
+  border: none;
+  font-weight: bold;
+}
+
+.Iine .btn:hover {
+  background-color: var(--blue);
+}
+
+.Iine .btn:focus {
+  box-shadow: none;
+}
+
+.Iine .btn:focus-visible {
+  outline: 2px solid var(--blue);
+}
+
+.Iine .btn:active {
+  background-color: var(--blue);
+  transform: translateY(1px);
+}
+
+.Iine .btn:disabled {
+  background-color: #000;
+  opacity: 0.5;
+}
+
+.Iine .btn:disabled:hover {
+  background-color: #000;
+}
+
+.likes-count {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: #000;
+  color: var(--blue);
+  animation: flicker 0.1s infinite;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.text-rotate {
+  display: inline-block;
+  transform: rotate(-5deg);
+}
+
+.text-flicker {
+  animation: flicker 0.1s infinite;
+  line-height: 5;
+}
+
+/* imgのフィルターを追加 */
+img,
+.profile img {
+  filter: invert(100%);
+}
+
+body {
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  color: var(--blue);
+  background-color: #000;
+  border: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.Iine .btn:hover {
+  background-color: var(--blue);
+  cursor: pointer;
+}
+body {
+  background-image: url("../sozai/backmari.jpeg");
+  background-repeat: repeat;
+}
+span {
+  color: red; /* 赤色に変更 */
+  font-family: "Yuji Boku", serif;
+  font-size: 50px;
+}
+
+h1 span {
+  color: var(--blue); /* 赤色に変更 */
+}
+
+.AboutContent {
+  line-height: 2;
+  font-size: 20px;
+}
+
+@-webkit-keyframes glitch {
+  0% {
+    clip: rect(17px, 9999px, 62px, 0);
+  }
+  5% {
+    clip: rect(43px, 9999px, 46px, 0);
+  }
+  10% {
+    clip: rect(87px, 9999px, 1px, 0);
+  }
+  15% {
+    clip: rect(11px, 9999px, 13px, 0);
+  }
+  20% {
+    clip: rect(9px, 9999px, 87px, 0);
+  }
+  25% {
+    clip: rect(8px, 9999px, 66px, 0);
+  }
+  30% {
+    clip: rect(87px, 9999px, 1px, 0);
+  }
+  35% {
+    clip: rect(3px, 9999px, 37px, 0);
+  }
+  40% {
+    clip: rect(54px, 9999px, 8px, 0);
+  }
+  45% {
+    clip: rect(35px, 9999px, 49px, 0);
+  }
+  50% {
+    clip: rect(38px, 9999px, 94px, 0);
+  }
+  55% {
+    clip: rect(66px, 9999px, 56px, 0);
+  }
+  60% {
+    clip: rect(10px, 9999px, 70px, 0);
+  }
+  65% {
+    clip: rect(100px, 9999px, 46px, 0);
+  }
+  70% {
+    clip: rect(24px, 9999px, 70px, 0);
+  }
+  75% {
+    clip: rect(47px, 9999px, 68px, 0);
+  }
+  80% {
+    clip: rect(67px, 9999px, 97px, 0);
+  }
+  85% {
+    clip: rect(5px, 9999px, 13px, 0);
+  }
+  90% {
+    clip: rect(84px, 9999px, 20px, 0);
+  }
+  95% {
+    clip: rect(53px, 9999px, 39px, 0);
+  }
+  100% {
+    clip: rect(57px, 9999px, 79px, 0);
+  }
+}
+
+@keyframes glitch {
+  0% {
+    clip: rect(17px, 9999px, 62px, 0);
+  }
+  5% {
+    clip: rect(43px, 9999px, 46px, 0);
+  }
+  10% {
+    clip: rect(87px, 9999px, 1px, 0);
+  }
+  15% {
+    clip: rect(11px, 9999px, 13px, 0);
+  }
+  20% {
+    clip: rect(9px, 9999px, 87px, 0);
+  }
+  25% {
+    clip: rect(8px, 9999px, 66px, 0);
+  }
+  30% {
+    clip: rect(87px, 9999px, 1px, 0);
+  }
+  35% {
+    clip: rect(3px, 9999px, 37px, 0);
+  }
+  40% {
+    clip: rect(54px, 9999px, 8px, 0);
+  }
+  45% {
+    clip: rect(35px, 9999px, 49px, 0);
+  }
+  50% {
+    clip: rect(38px, 9999px, 94px, 0);
+  }
+  55% {
+    clip: rect(66px, 9999px, 56px, 0);
+  }
+  60% {
+    clip: rect(10px, 9999px, 70px, 0);
+  }
+  65% {
+    clip: rect(100px, 9999px, 46px, 0);
+  }
+  70% {
+    clip: rect(24px, 9999px, 70px, 0);
+  }
+  75% {
+    clip: rect(47px, 9999px, 68px, 0);
+  }
+  80% {
+    clip: rect(67px, 9999px, 97px, 0);
+  }
+  85% {
+    clip: rect(5px, 9999px, 13px, 0);
+  }
+  90% {
+    clip: rect(84px, 9999px, 20px, 0);
+  }
+  95% {
+    clip: rect(53px, 9999px, 39px, 0);
+  }
+  100% {
+    clip: rect(57px, 9999px, 79px, 0);
+  }
+}
+
+@-webkit-keyframes glitch-2 {
+  0% {
+    clip: rect(19px, 9999px, 94px, 0);
+  }
+  5% {
+    clip: rect(81px, 9999px, 97px, 0);
+  }
+  10% {
+    clip: rect(58px, 9999px, 48px, 0);
+  }
+  15% {
+    clip: rect(16px, 9999px, 47px, 0);
+  }
+  20% {
+    clip: rect(54px, 9999px, 27px, 0);
+  }
+  25% {
+    clip: rect(93px, 9999px, 1px, 0);
+  }
+  30% {
+    clip: rect(55px, 9999px, 19px, 0);
+  }
+  35% {
+    clip: rect(34px, 9999px, 38px, 0);
+  }
+  40% {
+    clip: rect(82px, 9999px, 79px, 0);
+  }
+  45% {
+    clip: rect(45px, 9999px, 44px, 0);
+  }
+  50% {
+    clip: rect(67px, 9999px, 59px, 0);
+  }
+  55% {
+    clip: rect(83px, 9999px, 6px, 0);
+  }
+  60% {
+    clip: rect(95px, 9999px, 70px, 0);
+  }
+  65% {
+    clip: rect(74px, 9999px, 12px, 0);
+  }
+  70% {
+    clip: rect(21px, 9999px, 2px, 0);
+  }
+  75% {
+    clip: rect(1px, 9999px, 23px, 0);
+  }
+  80% {
+    clip: rect(11px, 9999px, 91px, 0);
+  }
+  85% {
+    clip: rect(81px, 9999px, 10px, 0);
+  }
+  90% {
+    clip: rect(22px, 9999px, 98px, 0);
+  }
+  95% {
+    clip: rect(68px, 9999px, 59px, 0);
+  }
+  100% {
+    clip: rect(79px, 9999px, 12px, 0);
+  }
+}
+
+@keyframes glitch-2 {
+  0% {
+    clip: rect(19px, 9999px, 94px, 0);
+  }
+  5% {
+    clip: rect(81px, 9999px, 97px, 0);
+  }
+  10% {
+    clip: rect(58px, 9999px, 48px, 0);
+  }
+  15% {
+    clip: rect(16px, 9999px, 47px, 0);
+  }
+  20% {
+    clip: rect(54px, 9999px, 27px, 0);
+  }
+  25% {
+    clip: rect(93px, 9999px, 1px, 0);
+  }
+  30% {
+    clip: rect(55px, 9999px, 19px, 0);
+  }
+  35% {
+    clip: rect(34px, 9999px, 38px, 0);
+  }
+  40% {
+    clip: rect(82px, 9999px, 79px, 0);
+  }
+  45% {
+    clip: rect(45px, 9999px, 44px, 0);
+  }
+  50% {
+    clip: rect(67px, 9999px, 59px, 0);
+  }
+  55% {
+    clip: rect(83px, 9999px, 6px, 0);
+  }
+  60% {
+    clip: rect(95px, 9999px, 70px, 0);
+  }
+  65% {
+    clip: rect(74px, 9999px, 12px, 0);
+  }
+  70% {
+    clip: rect(21px, 9999px, 2px, 0);
+  }
+  75% {
+    clip: rect(1px, 9999px, 23px, 0);
+  }
+  80% {
+    clip: rect(11px, 9999px, 91px, 0);
+  }
+  85% {
+    clip: rect(81px, 9999px, 10px, 0);
+  }
+  90% {
+    clip: rect(22px, 9999px, 98px, 0);
+  }
+  95% {
+    clip: rect(68px, 9999px, 59px, 0);
+  }
+  100% {
+    clip: rect(79px, 9999px, 12px, 0);
+  }
+}
+
+.glitch-effect {
+  color: white;
+  font-size: 60px;
+  position: relative;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.glitch-effect:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: -1px 0 red;
+  top: 0;
+  color: white;
+  background: black;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: glitch 2s infinite linear alternate-reverse;
+}
+
+.glitch-effect:before {
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  text-shadow: 1px 0 blue;
+  top: 0;
+  color: white;
+  background: black;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: glitch-2 3s infinite linear alternate-reverse;
+}
+/*# sourceMappingURL=common.css.map */
+
+.surprise {
+  font-size: 50px;
+  color: red;
+  text-transform: uppercase;
+  font-family: "Yuji Boku", serif;
+  letter-spacing: 2px;
+  text-align: center;
+
+  background: #000;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/*スクロール*/
+
+section {
+  display: flex;
+  padding: 2%;
+  box-sizing: border-box;
+}
+
+.up {
+  opacity: 0;
+  transition: all 0.1s ease;
+}
+
+.up.show {
+  opacity: 1;
+  transform: none;
+}
+
+.op {
+  transform: translate(0, 100px);
+}

@@ -1,85 +1,54 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ホラーウェブサイト</title>
+    <title>マリトッツォ</title>
     <style>
-      /* CSSスタイルをここに追加 */
+      #canvas {
+        width: 100%;
+        height: 100vh;
+      }
     </style>
   </head>
   <body>
-    <div id="text-container"></div>
+    <canvas id="canvas"></canvas>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-      $(document).ready(function () {
-        var words = [
-          "ひどい...",
-          "もう半年以上マリトッツォを食べていない。",
-          "みんな新しいスイーツばっか。",
-          "私はこんなにもマリトッツォを愛しているのに...",
-          "どうしてわかってくれないの？",
-          "許せない...",
-          "食べたい.....",
-          "食べさせろ......",
-          "食べsセr",
-          "ミンナ嫌イ",
-          "許セナイ",
-          "マリtッツo",
-          "マitッtォOdfijiedhnow",
-          "Mxiッoaivauhfiwjdfuiebwnd...",
-          "....",
-          ".......",
-          "............................",
-          "�䂾����̂悤�I�𔭌䂻�����̐�̒��Ȃ����I�𕜂���",
-          "��ނ���������Ă�������̂��ꍇ��������������Ȃ��Ă����̂ƁI",
-          "��̌���Ώ�ꂽ�̂͂Ȃ��������ɂ���������ꍇ�͂��̎��̍��߂���Ƃ����I",
-          "��̉��̂͂Ȃ�����������ɂ��郁�I�Ȃ����Ă��܂���I ����̂��邱�Ƃ̓����I�𔭌��I",
-        ];
+      // キャンバス要素の取得
+      const canvas = document.getElementById("canvas");
+      const context = canvas.getContext("2d");
 
-        // wordsを3倍に増やす
-        words = words.concat(words).concat(words);
+      // キャンバスのサイズをウィンドウのサイズに合わせる
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
 
-        // wordsをランダムに並び替える
-        words = shuffleArray(words);
+      // テキストを描画
+      function drawText() {
+        const text = "マリトッツォ";
+        const x = -100 + Math.random() * (canvas.width + 100);
+        const y = Math.random() * (canvas.height + 100);
 
-        var container = $("#text-container");
-        var currentIndex = 0;
+        // テキストの色を赤から徐々に濃い赤に変化させる
+        const red = Math.floor(Math.random() * 256);
+        context.fillStyle = `rgb(${red}, 0, 0)`;
 
-        function typeText() {
-          if (currentIndex >= words.length) {
-            return; // 全ての文字が表示されたら終了
-          }
+        // テキストの大きさをランダムに設定
+        const fontSize = Math.floor(Math.random() * 36) + 12;
+        context.font = `${fontSize}px Arial`;
 
-          var word = words[currentIndex];
-          var charIndex = 0;
-          var typingInterval = setInterval(function () {
-            if (charIndex < word.length) {
-              var char = word.charAt(charIndex);
-              container.append(char);
-              charIndex++;
-            } else {
-              clearInterval(typingInterval);
-              currentIndex++;
-              setTimeout(typeText, 10); // 次の文字を表示するまでの待ち時間（ミリ秒）
-            }
-          }, 1); // 1文字あたりの表示間隔（ミリ秒）
+        context.fillText(text, x, y);
+      }
+
+      // 定期的にテキストを描画
+      function animate() {
+        for (let i = 0; i < 40; i++) {
+          drawText();
         }
 
-        // 配列をランダムに並び替える関数
-        function shuffleArray(array) {
-          for (var i = array.length - 1; i > 0; i--) {
-            var j = Math.floor(Math.random() * (i + 1));
-            var temp = array[i];
-            array[i] = array[j];
-            array[j] = temp;
-          }
-          return array;
-        }
+        // 0.1秒ごとにアニメーションを繰り返す
+        setTimeout(animate, 10);
+      }
 
-        typeText();
-      });
+      animate();
     </script>
   </body>
 </html>

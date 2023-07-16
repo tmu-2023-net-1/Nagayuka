@@ -1,0 +1,27 @@
+body {
+  overflow: hidden;
+}
+
+.typeing {
+  opacity: 0;
+}
+
+.typeing.active {
+  opacity: 1;
+}
+
+.MojiMoji {
+  font-size: 40px;
+}
+
+#canvas {
+  width: 100%;
+  height: 100vh;
+}
+
+.mari {
+  z-index: 10;
+  position: relative;
+  top: 0;
+  left: 0;
+}
