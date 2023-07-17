@@ -11,7 +11,7 @@
     />
 
     <link rel="stylesheet" type="text/css" href="../style.css" />
-    <link rel="stylesheet" type="text/css" href="../scroll.css" />
+    <link rel="stylesheet" type="text/css" href="scroll.css" />
     <link rel="icon" href="../sozai/mariko.jpg" />
 
     <script src="../JS/iine.js"></script>
@@ -69,5 +69,46 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
+
+    <!-- <canvas id="canvas"></canvas>
+
+    <script>
+      // キャンバス要素の取得
+      const canvas = document.getElementById("canvas");
+      const context = canvas.getContext("2d");
+
+      // キャンバスのサイズをウィンドウのサイズに合わせる
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      // テキストを描画
+      function drawText() {
+        const text = "マリトッツォ";
+        const x = -100 + Math.random() * (canvas.width + 100);
+        const y = Math.random() * (canvas.height + 100);
+
+        // テキストの色を赤から徐々に濃い赤に変化させる
+        const red = Math.floor(Math.random() * 256);
+        context.fillStyle = `rgb(${red}, 0, 0)`;
+
+        // テキストの大きさをランダムに設定
+        const fontSize = Math.floor(Math.random() * 36) + 12;
+        context.font = `${fontSize}px Arial`;
+
+        context.fillText(text, x, y);
+      }
+
+      // 定期的にテキストを描画
+      function animate() {
+        for (let i = 0; i < 20; i++) {
+          drawText();
+        }
+
+        setTimeout(animate, 10);
+      }
+
+      // 15秒後にアニメーションを開始
+      setTimeout(animate, 15000);
+    </script> -->
   </body>
 </html>
