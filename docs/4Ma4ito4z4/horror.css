@@ -593,3 +593,32 @@ section {
 .op {
   transform: translate(0, 100px);
 }
+
+.AA {
+  font-size: 8pt;
+  font-family: "Inconsolata", monospace;
+  color: #fff;
+  background-color: #000;
+  width: 500px;
+  /*要素右寄せ*/
+  margin: 100px 100px 30px auto;
+}
+
+.AA img {
+  height: auto;
+  right: 0;
+  width: 500px;
+}
+
+.Question {
+  background-color: #000;
+  height: 100vh;
+
+  padding-top: 400px;
+  text-align: center;
+}
+
+footer {
+  background-color: #000;
+  height: 10vh;
+}
