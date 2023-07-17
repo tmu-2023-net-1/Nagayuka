@@ -2,23 +2,19 @@
 <html>
   <head>
     <title>マリトッツォ大好きブログ</title>
-
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
-
     <link rel="stylesheet" type="text/css" href="../style.css" />
     <link rel="stylesheet" type="text/css" href="scroll.css" />
     <link rel="icon" href="../sozai/mariko.jpg" />
-
     <script src="../JS/iine.js"></script>
     <script src="../JS/custom.js"></script>
     <script src="../JS/AutoText.js"></script>
   </head>
-
   <body class="p-3 mb-2 bg-light text-dark" style="overflow-y: scroll">
     <div class="headerimg col-">
       <img src="../sozai/header.jpg" alt="ヘッダー" />
@@ -29,7 +25,7 @@
       </div>
     </header>
 
-    <div class="container">
+    <div class="container" id="container">
       <div class="row">
         <main class="col-12 col-lg-8 order-2 order-lg-1">
           <article>
@@ -64,13 +60,9 @@
       </div>
     </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- <canvas id="canvas"></canvas>
+    <div id="takusan" style="display: none">
+      <canvas id="canvas"></canvas>
+    </div>
 
     <script>
       // キャンバス要素の取得
@@ -98,6 +90,18 @@
         context.fillText(text, x, y);
       }
 
+      // 15秒後に画面を切り替え
+      setTimeout(() => {
+        document.getElementById("container").style.display = "none";
+        document.getElementById("takusan").style.display = "block";
+        animate();
+      }, 15000);
+
+      // 3秒後に画面を切り替え
+      setTimeout(() => {
+        window.location.href = "../4Ma4ito4z4/index.html";
+      }, 18000);
+
       // 定期的にテキストを描画
       function animate() {
         for (let i = 0; i < 20; i++) {
@@ -106,9 +110,12 @@
 
         setTimeout(animate, 10);
       }
+    </script>
 
-      // 15秒後にアニメーションを開始
-      setTimeout(animate, 15000);
-    </script> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
