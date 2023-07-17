@@ -87,3 +87,46 @@
   height: 50%;
   width: auto;
 }
+
+.BG3 {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+
+  font-size: 80px;
+
+  color: rgb(182, 41, 41);
+
+  font-family: "Yuji Boku", serif;
+
+  transform: rotate(-15deg);
+
+  animation: shake 0.5s infinite;
+}
+
+.BG4 {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  right: 0;
+  color: rgb(182, 41, 41);
+  font-weight: bold;
+  margin: 10px;
+
+  font-size: 150px;
+  font-family: "Yuji Boku", serif;
+
+  transform: rotate(-5deg);
+
+  animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-5px, 0);
+  }
+}
