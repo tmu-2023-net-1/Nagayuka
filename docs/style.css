@@ -251,3 +251,9 @@ p {
   background-color: #e3acae;
   border-color: #e3acae;
 }
+
+.myprofile {
+  text-align: right;
+  color: grey;
+  margin-top: 40px;
+}

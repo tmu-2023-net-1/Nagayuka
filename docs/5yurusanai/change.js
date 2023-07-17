@@ -8,7 +8,7 @@ window.onload = function () {
 
     if (currentIndex === elements.length - 1) {
       // 最後の要素の場合、リダイレクトする
-      //   window.location.href = "../6usodayo/index.html";
+      window.location.href = "../6usodayo/index.html";
     } else {
       currentElement.classList.remove(elements[currentIndex]);
       currentElement.style.display = "none";
@@ -19,14 +19,14 @@ window.onload = function () {
       nextElement.style.display = "block";
 
       if (elements[currentIndex] === "loading") {
-        setTimeout(switchClasses, 2000); // 3秒後にswitchClasses関数を実行する
+        setTimeout(switchClasses, 2000);
       } else {
-        setTimeout(switchClasses, 5000); // 5秒後にswitchClasses関数を実行する
+        setTimeout(switchClasses, 3000);
       }
     }
   }
 
-  setTimeout(switchClasses, 3000); // 3秒後にswitchClasses関数を実行する
+  setTimeout(switchClasses, 3000);
 
   // ボタンをクリックした際の処理
   var button = document.querySelector("#second button");
