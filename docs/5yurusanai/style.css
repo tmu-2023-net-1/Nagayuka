@@ -1,0 +1,89 @@
+.loading,
+.second,
+.third {
+  display: none;
+}
+
+.loading {
+  margin: 5px;
+  display: block;
+  height: 95vh;
+  width: 95vw;
+  display: flex;
+}
+
+.second {
+  text-align: center;
+}
+
+.third {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background-color: black;
+}
+
+.mariobake {
+  position: absolute;
+  left: 15%;
+
+  width: auto;
+  height: 90%;
+  object-fit: cover;
+  display: block;
+  justify-items: center;
+  margin: 0 auto;
+  animation: shake_anim 1.5s infinite;
+  z-index: 2;
+}
+
+@keyframes shake_anim {
+  0% {
+    transform: translate(0, 0) scale(2);
+  }
+  5% {
+    transform: translate(-10px, -0) scale(2);
+  }
+  10% {
+    transform: translate(10px, 0) scale(1);
+  }
+  15% {
+    transform: translate(-10px, -0) scale(3);
+  }
+  20% {
+    transform: translate(10px, 0) scale(1);
+  }
+  25% {
+    transform: translate(-10px, -0) scale(1.5);
+  }
+  30% {
+    transform: translate(0, 0) scale(1.5);
+  }
+  100% {
+    transform: translate(-10px, 0) scale(1.5);
+  }
+}
+
+.vsc-initialized {
+  margin: 0;
+  padding: 0;
+}
+
+.BG {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: auto;
+}
+
+.BG2 {
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+
+  height: 50%;
+  width: auto;
+}
