@@ -14,3 +14,6 @@ window.onload = function () {
   };
   window.addEventListener("scroll", Animation);
 };
+
+const element = document.querySelector(".slide-in");
+element.classList.add("show");
