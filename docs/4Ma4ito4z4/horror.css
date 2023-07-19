@@ -644,31 +644,31 @@ h4 {
 }
 
 .tubure img {
-  width: 400px;
+  width: 30%;
 }
 
 .tubure2 img {
   position: relative;
-  width: 400px;
-  left: 200px;
+  width: 30%;
+  left: 15%;
 }
 
 .tubure3 img {
-  width: 400px;
+  width: 30%;
   position: relative;
-  left: 400px;
+  left: 35%;
 }
 
 .tubure4 img {
-  width: 400px;
+  width: 30%;
   position: relative;
-  left: 600px;
+  left: 55%;
 }
 
 .tubure5 img {
-  width: 400px;
+  width: 30%;
   position: relative;
-  left: 800px;
+  left: 70%;
 }
 
 .slide-in {
