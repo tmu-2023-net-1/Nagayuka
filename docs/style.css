@@ -257,3 +257,17 @@ p {
   color: grey;
   margin-top: 40px;
 }
+
+.mb-2 {
+  margin-bottom: 0rem !important;
+}
+
+.attention {
+  line-height: normal;
+  font-size: 14px;
+  color: rgb(84, 84, 84);
+}
+
+.link:hover {
+  text-decoration: underline;
+}

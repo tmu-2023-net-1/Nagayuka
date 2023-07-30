@@ -36,5 +36,9 @@ window.onload = function () {
 
     secondElement.style.display = "none";
     thirdElement.style.display = "block";
+
+    // thirdに入ったら音声を再生する
+    var audioElement = document.getElementById("audioElement");
+    audioElement.play();
   });
 };

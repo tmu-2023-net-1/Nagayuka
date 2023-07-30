@@ -223,6 +223,7 @@ img,
 
 body {
   color: #fff;
+  margin: 0;
 }
 
 a {
@@ -689,4 +690,8 @@ h4 {
 .tubusareta {
   text-align: center;
   filter: grayscale(100%);
+}
+
+.mb-2 {
+  margin-bottom: 0rem !important;
 }

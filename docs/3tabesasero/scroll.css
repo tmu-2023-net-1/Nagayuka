@@ -32,3 +32,7 @@ body {
   width: 100%;
   height: 100%; /* 変更 */
 }
+
+.mb-2 {
+  margin-bottom: 0rem !important;
+}
